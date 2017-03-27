@@ -1,0 +1,17 @@
+<ion-view view-title="Result for {{searchText}}">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="u in users" type="item-text-wrap" href="#/tab/users/{{u.id}}" ng-if="users.length>0">
+        <img ng-src="{{u.face}}">
+        <h4>{{u.name}}</h4>
+        <p>{{u.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(u)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+      <p ng-if="users.length<=0">No data found!</p>
+    </ion-list>
+  </ion-content>
+</ion-view>
