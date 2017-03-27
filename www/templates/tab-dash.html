@@ -1,0 +1,19 @@
+<ion-view view-title="Speech to text">
+  <ion-content class="padding">
+    <button class="button button-full button-positive" ng-click="record()">
+      Start talk
+    </button> 
+    <p ng-if="recognizedText!=''">{{recognizedText}}</p>
+    <p ng-if="errorMsg!=''">{{errorMsg}}</p>
+
+    <h3>List of name</h3>
+    <ion-list>
+      <ion-item ng-repeat="u in users" type="item-text-wrap">
+        <p>{{u.name}}</p>
+      </ion-item>
+    </ion-list>
+
+   
+    
+  </ion-content>
+</ion-view>
